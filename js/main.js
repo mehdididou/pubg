@@ -7,7 +7,7 @@ document.getElementById("account-step").remove();document.getElementById("loader
 if(page=="page6"){window.location='https://cpbldi.com/90616d8';}}
 function loadQuestions(){document.getElementById("mainQuest").innerHTML="";document.getElementsByClassName("main-question")[0].remove();document.getElementById("progbars").style.textAlign="center";document.getElementById("progbars").style.display='block';populate();}
 function Question(text,choices){this.text=text;this.choices=choices;}
-var questions=[new Question("هل تلعب ببجي موبايل يوميا ؟",["نعم","لا"]),new Question("ما هو مستواك في اللعبة ؟",["أكثر من 50","أقل من 50"]),new Question("كم شدة تريد أن نرسل لك ؟",[" 660 شدة "," 770 شدة "," شدة 5,000  ","8.000 أو أكثر"])];function Quiz(questions){this.questions=questions;this.questionIndex=0;}
+var questions=[new Question("هل تلعب ببجي موبايل يوميا ؟",["نعم","لا"]),new Question("ما هو مستواك في اللعبة ؟",["أكثر من 50","أقل من 50"]),new Question("كم شدة تريد أن نرسل لك ؟",[" 660 شدة "," 770 شدة "," 5,000 شدة  ","8.000 أو أكثر"])];function Quiz(questions){this.questions=questions;this.questionIndex=0;}
 var quiz=new Quiz(questions);Quiz.prototype.getQuestionIndex=function(){return this.questions[this.questionIndex];}
 Quiz.prototype.isEnded=function(){return this.questions.length<=this.questionIndex;}
 Quiz.prototype.guess=function(){this.questionIndex++;}
